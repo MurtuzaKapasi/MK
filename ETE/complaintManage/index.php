@@ -1,5 +1,4 @@
-<!--  Develop a app using PHP and MySQl for Complaint Management System.
- -->
+<!--  Develop a app using PHP and MySQl for Complaint Management System. -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +10,16 @@
 <body>
     <h1>Customer Complaint Registration Form</h1>
     <form action="Complaint.php" method="post">
-        
-
+    <label for="name">ID: </label>
+    <input type="text" name="id" id="id">
+    <br>
+    <label for="email" >Email: </label>
+    <input type="text" name="email" id="email">
+    <br>
+    <label for="complaint">Complaint: </label>
+    <input type="textarea" name="complaint" id="complaint" placeholder="Enter Complaint">
+    <br>
+    <input type="submit" name="submit" value="Submit">
     </form>
 </body>
 </html>
