@@ -63,6 +63,9 @@
             mysqli_close($conn);
             ?>
         </table>
+
+        <a href="index.php">Back to Home</a>
+        <a href="delete.php">Delete a  Complaint</a>
     </div>
 </body>
 </html>
