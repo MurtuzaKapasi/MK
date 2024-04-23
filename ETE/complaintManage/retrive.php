@@ -65,7 +65,8 @@
         </table>
 
         <a href="index.html">Back to Home</a><br><br>
-        <a href="delete.php">Delete a  Complaint</a>
+        <a href="delete.php">Delete a  Complaint</a><br><br>
+        <a href="update.php">Update a  Complaint</a>
     </div>
 </body>
 </html>
