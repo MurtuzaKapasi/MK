@@ -10,8 +10,11 @@
 <body>
     <h1>Customer Complaint Registration Form</h1>
     <form action="Complaint.php" method="post">
-    <label for="name">ID: </label>
+    <label for="id">ID: </label>
     <input type="text" name="id" id="id">
+    <br>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name">
     <br>
     <label for="email" >Email: </label>
     <input type="text" name="email" id="email">

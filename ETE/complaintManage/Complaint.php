@@ -1,4 +1,5 @@
-
+<!-- Submit php -->
+<?php
 $conn = mysqli_connect("localhost" , "root" , "" , "murtuza");
 
 $id = $_POST["id"];
@@ -10,6 +11,10 @@ $sql = mysqli_query($conn , "INSERT INTO customerComplaint VALUES ('$id' , '$nam
 
 if($sql)
     echo "Record Inserted Successfully";
+    header("location:retrive.php");
 else
     echo "Not Inserted"
-    
+
+    mysql_close($conn);
+?>
+
