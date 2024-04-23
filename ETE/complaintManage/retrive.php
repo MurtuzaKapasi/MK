@@ -64,7 +64,7 @@
             ?>
         </table>
 
-        <a href="index.php">Back to Home</a>
+        <a href="index.html">Back to Home</a><br><br>
         <a href="delete.php">Delete a  Complaint</a>
     </div>
 </body>
