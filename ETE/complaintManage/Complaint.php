@@ -9,11 +9,12 @@ $complaint = $_POST["complaint"];
 
 $sql = mysqli_query($conn , "INSERT INTO customerComplaint VALUES ('$id' , '$name' , '$email' , '$complaint')");
 
-if($sql)
-    echo "Record Inserted Successfully";
-    header("location:retrive.php");
-else
-    echo "Not Inserted"
+    if($sql){
+        echo "Record Inserted Successfully";
+        header("location:retrive.php");
+    }
+    else
+        echo "Not Inserted";
 
     mysql_close($conn);
 ?>
