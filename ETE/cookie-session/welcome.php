@@ -1,11 +1,11 @@
 <?php
 
-    session_start()
+    session_start();
 
     if(isset($_SESSION['username'])){
         echo "Welcome" .$_SESSION['username'];
     }else{
-        if(isset($_COOOKIE['username'])){
+        if(isset($_COOKIE['username'])){
            $_SESSION['username'] = $_COOKIE['username'];
            echo "Welcome" .$_SESSION['username'];
         }else{
@@ -13,8 +13,8 @@
         }       
     }
 
-    if(isset($_SESSION['username']) %% !isset($_COOOKIE['username'])){
-            setcookie('username' , $_SESSION['username'] , time() + (86400 * 30), "/");
+    if(isset($_SESSION['username']) && !isset($_COOKIE['username'])){
+            setcookie('username' , $_SESSION['username'] , 10, "/");
     }
 ?>
 
