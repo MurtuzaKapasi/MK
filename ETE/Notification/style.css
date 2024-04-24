@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .notification {
+    display: none;
+    position: fixed;
+    top: 20px; /* Updated position */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .notification:hover {
+    transform: translateX(-50%) scale(1.05);
+  }
+
+  .show {
+    display: block;
+  }
+  
+  .notification .close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .notification p {
+    margin: 0;
+  }
+  

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Popup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- <div class="container">
+    <h1>Welcome to Your Website</h1>
+    <button id="showNotificationBtn">Show Notification</button>
+  </div>
+
+  <div id="notificationPopup" class="notification">
+    <span class="close" id="closeBtn">&times;</span>
+    <p id="notificationText"></p>
+  </div> -->
+
+  <div class="container">
+    <h1>Welcome to Your Website</h1>
+    <button class="btn btn-primary" id="showNotificationBtn">Show Notification</button>
+  </div>
+
+  <div id="notificationPopup" class="notification">
+    <span class="close" id="closeBtn">&times;</span>
+    <p id="notificationText"></p>
+  </div>
+
+
+  <!-- <script src="script.js"></script> -->
+
+  <script>
+
+    document.getElementById("showNotificationBtn").addEventListener("click" , function(){showNotification("This is updated Message " , 5000)});
+
+    document.getElementById("closeBtn").addEventListener("click" , closeNotification);
+
+    function showNotification(message , duration){
+      var notification = document.getElementById("notificationPopup");
+      var notificationText = document.getElementById("notificationText");
+      notificationText.textContent = message;
+
+      notification.classList.add("show");
+      setTimeout(function(){
+        notification.classList.remove("show");
+      } , duration);
+    }
+
+      function closeNotification(){
+        var notification = document.getElementById("notificationPopup");
+        notification.classList.remove("show");
+      }
+
+  </script>
+</body>
+</html>

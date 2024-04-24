@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studentacct id="123"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file.xsd">
+    <studentnm>ABCD1</studentnm>
+    <courses>
+        <name>Web Dev</name>
+        <mentor>Sahil</mentor>
+        <duration>5 hr</duration>
+        <country>India</country>
+    </courses>
+    <progress>
+        <week>1st week</week>
+        <task>Learn React js</task>
+        <taskstatus>80</taskstatus>
+        <grade>50</grade>
+    </progress>
+    <report>
+        <title>Car</title>
+        <content>Implementation done</content>
+        <link>report.com</link>
+    </report>
+</studentacct>

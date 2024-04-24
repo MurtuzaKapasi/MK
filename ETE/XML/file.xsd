@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="studentacct">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="studentnm" type="xs:string" />
+                <xs:element name="courses">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="mentor" type="xs:string" minOccurs="1" />
+                            <xs:element name="duration" type="xs:string" />
+                            <xs:element name="country" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="progress" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="week" type="xs:string" />
+                            <xs:element name="task" type="xs:string" minOccurs="0" />
+                            <xs:element name="taskstatus" type="xs:positiveInteger" />
+                            <xs:element name="grade" type="xs:positiveInteger" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="report" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string" />
+                            <xs:element name="content" type="xs:string" minOccurs="0" />
+                            <xs:element name="link" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

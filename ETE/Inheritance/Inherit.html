@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        form {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        form:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        input {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .dimensions {
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="Inherit_res.php" method="get">
+            <h2>Area Calculator</h2>
+            <div>
+                <input type="radio" name="op" value="Cone" onclick="showDimensions('coneDimensions')"> Cone
+                <div class="dimensions" id="coneDimensions" style="display:none;">
+                    Radius: <input type="text" name="rC" placeholder="Enter Radius"><br><br>
+                    Base: <input type="text" name="hC" placeholder="Enter base">
+                </div>
+            </div>
+            <div>
+                <input type="radio" name="op" value="Cylinder" onclick="showDimensions('cylinderDimensions')"> Cylinder
+                <div class="dimensions" id="cylinderDimensions" style="display:none;">
+                    Radius: <input type="text" name="r" placeholder="Enter Radius"><br><br>
+                    Base: <input type="text" name="h" placeholder="Enter base">
+                </div>
+            </div>
+            <div>
+                <input type="radio" name="op" value="Sphere" onclick="showDimensions('sphereDimensions')"> Sphere
+                <div class="dimensions" id="sphereDimensions" style="display:none;">
+                    Radius: <input type="text" name="r1" placeholder="Enter Radius">
+                </div>
+            </div>
+        <input type="submit" value="SUBMIT">
+    </form>
+
+    <script>
+        function showDimensions(shape) {
+            var dimensions = document.getElementsByClassName('dimensions');
+            for (var i = 0; i < dimensions.length; i++) {
+                dimensions[i].style.display = 'none';
+            }
+            document.getElementById(shape).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
