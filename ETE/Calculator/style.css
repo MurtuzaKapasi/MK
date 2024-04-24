@@ -8,6 +8,7 @@
     align-items: center;
     height: 100vh;
     display: flex;
+    background-color: rgb(31, 23, 23);
 }
 .calculator{
     background-color: rgb(41, 41, 41);
