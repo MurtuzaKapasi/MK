@@ -1,0 +1,28 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.railway-table{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+.railway-table th , .railway-table td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 8px;
+}
+
+.railway-table tbody tr{
+    background-color: aliceblue;
+}
+
+.railway-table tbody tr:nth-child(odd){
+    background-color: rgb(228, 242, 255);
+}
+
+.railway-table tbody tr:hover{
+    background-color: rgb(180, 220, 255);
+}
