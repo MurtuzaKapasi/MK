@@ -12,13 +12,13 @@ function generateFibonacci(n) {
     return fibSeries;
 }
 
-// Display Fibonacci series on HTML page
-document.addEventListener('DOMContentLoaded', function() {
-    const fibonacciSeriesElement = document.getElementById('fibonacci-series');
-    const n = this.doctype.getElementById("no");
-    // const n = 10; // Change n to the desired number of terms in the series
+// Function to handle click event
+function handleClick(event) {
+    event.preventDefault();
+    const n = parseInt(document.getElementById('no').value);
     const fibonacciSeries = generateFibonacci(n);
-    
-    // Displaying the series on the HTML page
-    fibonacciSeriesElement.innerHTML = `<p>${fibonacciSeries.join(', ')}</p>`;
-});
+    document.getElementById('fibonacci-output').innerHTML = `<p>${fibonacciSeries.join(', ')}</p>`;
+}
+
+// Add click event listener to the submit button
+document.getElementById('submit').addEventListener('click', handleClick);

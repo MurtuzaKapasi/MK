@@ -26,7 +26,6 @@
             width: 100%;
             padding: 30px;
             box-sizing: border-box;
-            transition: transform 0.3s ease-in-out;
             margin-bottom: 20px;
             text-align: center;
             color: #333;

@@ -2,7 +2,7 @@
 ### ` mysqli_connect() - Connect to a MySQL server`
 Syntax -- mysqli_connect($host, $user, $passwd, $dbname)
 
-where $host = "localhost", $user = "root", $passwd = "root", $dbname = "test"
+where $host = "localhost", $user = "root", $passwd = "", $dbname = "test"
 ### `mysqli_close() - Close a MySQL connection`
 Syntax -- mysqli_close($conn)
 
